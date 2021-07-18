@@ -1,3 +1,5 @@
+// import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'register.dart';
 import 'greetings.dart';
@@ -29,6 +31,9 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                SizedBox(
+                  height: 40,
+                ),
                 Center(
                   child: Text(
                     'CRuX FLUTTER SUMMER GROUP',
@@ -38,30 +43,52 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-                // SizedBox(height: 40),
-                Text('ID Number'),
-                TextField(
-                  controller: myController,
-                  autofocus: false,
-                  decoration: InputDecoration(
-                    filled: true,
-                    border: OutlineInputBorder(),
-                    fillColor: Colors.black12,
-                    focusColor: Colors.green,
-                    hintText: 'Enter BITS ID',
-                  ),
+                // SizedBox(height: 80),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('ID Number'),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    TextField(
+                      controller: myController,
+                      autofocus: false,
+                      decoration: InputDecoration(
+                        filled: true,
+                        border: OutlineInputBorder(),
+                        fillColor: Colors.black12,
+                        focusColor: Colors.green,
+                        hintText: 'Enter BITS ID',
+                      ),
+                    ),
+                  ],
                 ),
-                Text('Password'),
-                TextField(
-                  autofocus: false,
-                  decoration: InputDecoration(
-                    filled: true,
-                    border: OutlineInputBorder(),
-                    fillColor: Colors.black12,
-                    focusColor: Colors.white,
-                    hintText: 'Enter Password',
-                  ),
+
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Password'),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    TextField(
+                      obscureText: true,
+                      autofocus: false,
+                      decoration: InputDecoration(
+                        filled: true,
+                        border: OutlineInputBorder(),
+                        fillColor: Colors.black12,
+                        focusColor: Colors.white,
+                        hintText: 'Enter Password',
+                      ),
+                    ),
+                    SizedBox(
+                      height: 40,
+                    ),
+                  ],
                 ),
+
                 GestureDetector(
                   child: Container(
                     child: Center(
@@ -74,7 +101,7 @@ class _LoginPageState extends State<LoginPage> {
                       color: Color(0xff2FC4B2),
                       borderRadius: BorderRadius.circular(5),
                     ),
-                    margin: EdgeInsets.all(20),
+                    // margin: EdgeInsets.all(20),
                     padding: EdgeInsets.all(20),
                     // width: double.infinity,
                   ),
